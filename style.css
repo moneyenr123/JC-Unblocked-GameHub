@@ -1,65 +1,81 @@
         :root {
     --primary: #182a69;
-    --primary-hover: #243d8f;
-    --primary-light: rgba(252, 38, 81, 0.1);
-    --primary-lighter: rgba(252, 38, 81, 0.05);
-    --accent: #8b5cf6;
-    --accent-light: rgba(139, 92, 246, 0.1);
-    --success: #10b981;
-    --warning: #f59e0b;
-    --text: #1a1a1a;
-    --text-muted: #6b7280;
-    --text-light: #9ca3af;
-    --bg: #ffffff;
-    --bg-secondary: #f8fafc;
-    --surface: #ffffff;
-    --surface-hover: #f1f5f9;
-    --border: #e2e8f0;
-    --border-light: #f1f5f9;
-    --glass: rgba(255, 255, 255, 0.8);
-    --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    --shadow-glow: 0 0 20px rgba(252, 38, 81, 0.3);
-    --radius: 12px;
-    --radius-sm: 8px;
-    --radius-lg: 16px;
-    --radius-xl: 20px;
-    --gradient-primary: linear-gradient(135deg, #fc2651 0%, #e91e47 100%);
-    --gradient-accent: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-    --gradient-surface: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+--primary-hover: #243d8f;
+
+--primary-light: rgba(24, 42, 105, 0.15);
+--primary-lighter: rgba(24, 42, 105, 0.08);
+
+--accent: #8b5cf6;
+--accent-light: rgba(139, 92, 246, 0.1);
+
+--success: #10b981;
+--warning: #182a69;
+
+--text: #1a1a1a;
+--text-muted: #6b7280;
+--text-light: #9ca3af;
+
+--bg: #ffffff;
+--bg-secondary: #f8fafc;
+
+--surface: #ffffff;
+--surface-hover: #f1f5f9;
+
+--border: #e2e8f0;
+--border-light: #f1f5f9;
+
+--glass: rgba(255, 255, 255, 0.8);
+
+--shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+--shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+--shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+--shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+--shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+--shadow-glow: 0 0 20px rgba(24, 42, 105, 0.3);
+
+--radius: 12px;
+--radius-sm: 8px;
+--radius-lg: 16px;
+--radius-xl: 20px;
+
+--gradient-primary: linear-gradient(135deg, #182a69 0%, #243d8f 100%);
+--gradient-accent: linear-gradient(135deg, #8b5cf6
 }
 
 .dark-mode {
-    --primary: #182a69;
-    --primary-hover: #243d8f;
-    --primary-light: rgba(252, 38, 81, 0.15);
-    --primary-lighter: rgba(252, 38, 81, 0.08);
-    --accent: #a855f7;
-    --accent-light: rgba(168, 85, 247, 0.15);
-    --success: #34d399;
-    --warning: #fbbf24;
-    --text: #f1f5f9;
-    --text-muted: #94a3b8;
-    --text-light: #64748b;
-    --bg: #0f172a;
-    --bg-secondary: #1e293b;
-    --surface: #1e293b;
-    --surface-hover: #334155;
-    --border: #334155;
-    --border-light: #475569;
-    --glass: rgba(30, 41, 59, 0.8);
-    --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.4);
-    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.5), 0 1px 2px -1px rgb(0 0 0 / 0.5);
-    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.5);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.6), 0 4px 6px -4px rgb(0 0 0 / 0.6);
-    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.7), 0 8px 10px -6px rgb(0 0 0 / 0.7);
-    --shadow-glow: 0 0 20px rgba(252, 38, 81, 0.4);
-    --gradient-primary: linear-gradient(135deg, #fc2651 0%, #ff4d75 100%);
-    --gradient-accent: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
-    --gradient-surface: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  --primary: #182a69;
+--primary-hover: #243d8f;
+
+--primary-light: rgba(24, 42, 105, 0.15);
+--primary-lighter: rgba(24, 42, 105, 0.08);
+
+--accent: #a855f7;
+--accent-light: rgba(168, 85, 247, 0.15);
+
+--success: #34d399;
+--warning: #fbbf24;
+
+--text: #f1f5f9;
+--text-muted: #94a3b8;
+--text-light: #64748b;
+
+--bg: #0f172a;
+--bg-secondary: #1e293b;
+
+--surface: #1e293b;
+--surface-hover: #334155;
+
+--border: #334155;
+--border-light: #475569;
+
+--glass: rgba(30, 41, 59, 0.8);
+
+--shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.4);
+--shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.5), 0 1px 2px -1px rgb(0 0 0 / 0.5);
+--shadow: 0 4px 6px -1px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.5);
+--shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.6), 0 4px 6px -4px rgb(0 0 0 / 0.6);
+--shadow-xl: 
 }
 
 * {
@@ -642,4 +658,5 @@ footer {
     box-shadow: var(--shadow-sm);
 
 }
+
 
