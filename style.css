@@ -33,8 +33,8 @@
 }
 
 .dark-mode {
-    --primary: #fc2651;
-    --primary-hover: #ff4d75;
+    --primary: #182a69;
+    --primary-hover: #243d8f;
     --primary-light: rgba(252, 38, 81, 0.15);
     --primary-lighter: rgba(252, 38, 81, 0.08);
     --accent: #a855f7;
@@ -640,4 +640,5 @@ footer {
 .settings-button:active {
     transform: translateY(0);
     box-shadow: var(--shadow-sm);
+
 }
