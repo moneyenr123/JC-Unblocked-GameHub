@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
+
     <script>
         window.addEventListener('beforeunload', function (event) {
             event.preventDefault();
@@ -11,43 +12,48 @@
             return 'Are you sure you want to leave? Any unsaved changes will be lost.';
         });
     </script>
-    <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5521219086088837" crossorigin="anonymous"></script>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WX5VS54ZDW"></script>
-    <meta name="google-adsense-account" content="ca-pub-5521219086088837">
+
+    <!-- Removed Google Ads + Funding Choices + AdSense scripts -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WX5VS54ZDW"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+        function gtag(){ dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-WX5VS54ZDW');
     </script>
-    <script async src="https://fundingchoicesmessages.google.com/i/pub-5521219086088837?ers=1"></script><script>(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+
     <script src="https://cdn.jsdelivr.net/gh/gn-math/gn-math-DONTDMCA@main/gnmath.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gn-math</title>
-    <meta name="title" content="GN-Math">
-    <meta name="description" content="Play unbl*cked games like Crazy Cattle 3D and DriveMad on GN-Math. Fast, free, no downloads—perfect for school or home.">
+
+    <title>JC Unblocked</title>
+    <meta name="title" content="JC Unblocked">
+    <meta name="description" content="Play unblocked games like Crazy Cattle 3D, Drive Mad, and more on JC Unblocked — fast, clean, and school-friendly.">
+
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gn-math.github.io/">
-    <meta property="og:title" content="GN-Math">
-    <meta property="og:description" content="Play unbl*cked games like Crazy Cattle 3D and DriveMad on GN-Math. Fast, free, no downloads—perfect for school or home.">
+    <meta property="og:url" content="https://jc-unblocked.github.io/">
+    <meta property="og:title" content="JC Unblocked">
+    <meta property="og:description" content="Play unblocked games instantly on JC Unblocked — fast, free, and perfect for school.">
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://gn-math.github.io/">
-    <meta name="twitter:title" content="GN-Math">
-    <meta name="twitter:description" content="Play unbl*cked games like Crazy Cattle 3D and DriveMad on GN-Math. Fast, free, no downloads—perfect for school or home.">
+    <meta name="twitter:url" content="https://jc-unblocked.github.io/">
+    <meta name="twitter:title" content="JC Unblocked">
+    <meta name="twitter:description" content="Your #1 school-friendly unblocked games hub.">
+
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#fb2651">
 </head>
+
 <body class="dark-mode">
     <header>
         <div class="header-content">
-            <div class="logo">gn-math</div>
+            <div class="logo">JC Unblocked</div>
+
             <div class="search-container">
-                <input type="text" id="searchBar" placeholder="Search zones..." oninput="filterZones()">
+                <input type="text" id="searchBar" placeholder="Search games..." oninput="filterZones()">
                 <select id="sortOptions" onchange="sortZones()">
                     <option value="name">Name</option>
                     <option value="id">ID (Date)</option>
@@ -57,8 +63,9 @@
                     <option value="none">(SELECT TAG)</option>
                 </select>
             </div>
+
             <div class="control-buttons">
-                <button id="refresh" class="control-button" title="Refresh all the zones" onclick="listZones()">
+                <button id="refresh" class="control-button" title="Refresh all games" onclick="listZones()">
                     <img src="refresh-icon.png" alt="refresh">
                 </button>
 
@@ -68,24 +75,19 @@
             </div>
         </div>
     </header>
-    <ins class="adsbygoogle"
-    style="display:block; text-align:center;"
-    data-ad-client="ca-pub-5521219086088837"
-    data-ad-slot="5549138288"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-   <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-   </script>
+
+    <!-- All ad blocks removed -->
 
     <main>
         <details id="featuredZonesWrapper" open>
-            <summary id="allZonesSummary" style="font-size: 1.2rem; font-weight: bold; cursor: pointer;">Featured Zones</summary>
+            <summary id="allZonesSummary" style="font-size: 1.2rem; font-weight: bold; cursor: pointer;">Featured Games</summary>
             <div id="featuredZones" class="zone-container"></div>
         </details>
+
         <br><hr><br>
+
         <details id="allZonesWrapper" open>
-            <summary id="allSummary" style="font-size: 1.2rem; font-weight: bold; cursor: pointer;">All Zones</summary>
+            <summary id="allSummary" style="font-size: 1.2rem; font-weight: bold; cursor: pointer;">All Games</summary>
             <div id="container">Loading...</div>
         </details>
     </main>
@@ -93,10 +95,11 @@
     <div id="zoneViewer">
         <div class="zone-header">
             <div class="zone-title">
-                <h2 id="zoneName">zone</h2>
+                <h2 id="zoneName">Game</h2>
                 <span id="zoneId" style="display: none;"></span>
                 <a id="zoneAuthor" href="#" target="_blank">by Author</a>
             </div>
+
             <div class="zone-controls">
                 <button onclick="fullscreenZone()">Fullscreen</button>
                 <button onclick="aboutBlank()">Open in New Tab</button>
@@ -104,6 +107,7 @@
                 <button onclick="closeZone()">Close</button>
             </div>
         </div>
+
         <iframe id="zoneFrame"></iframe>
     </div>
 
@@ -113,21 +117,10 @@
                 <h3 id="popupTitle">Title</h3>
                 <button id="popupClose" onclick="closePopup()">×</button>
             </div>
-            <div id="popupBody">
-                Content will be here
-            </div>
+            <div id="popupBody">Content will be here</div>
         </div>
     </div>
 
-    <ins class="adsbygoogle"
-    style="display:block; text-align:center;"
-    data-ad-client="ca-pub-5521219086088837"
-    data-ad-slot="5549138288"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-   <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-   </script>
     <footer>
         <div class="footer-links">
             <a href="#" onclick="loadDMCA(); return false;">DMCA</a>
@@ -138,16 +131,17 @@
             <input type="file" id="importData" style="display: none;" onchange="loadData(event)">
         </div>
     </footer>
+
     <script src="script.js"></script>
+
     <script>
         const search = new URLSearchParams(window.location.search);
         const privacy = search.get('privacy');
-        if (privacy) {
-            loadPrivacy();
-        }
+        if (privacy) loadPrivacy();
     </script>
+
     <script>
-        navigator.serviceWorker.register(location.protocol+"//"+location.hostname+"/sw.js");
+        navigator.serviceWorker.register(location.protocol + "//" + location.hostname + "/sw.js");
     </script>
 </body>
 </html>
