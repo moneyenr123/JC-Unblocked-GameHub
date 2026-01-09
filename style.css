@@ -1,6 +1,6 @@
         :root {
-    --primary: #fc2651;
-    --primary-hover: #e91e47;
+    --primary: #182a69;
+    --primary-hover: #243d8f;
     --primary-light: rgba(252, 38, 81, 0.1);
     --primary-lighter: rgba(252, 38, 81, 0.05);
     --accent: #8b5cf6;
@@ -642,3 +642,4 @@ footer {
     box-shadow: var(--shadow-sm);
 
 }
+
