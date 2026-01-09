@@ -7,10 +7,11 @@
   "theme_color": "#fb2651",
   "icons": [
     {
-      "src": "/favicon.png",
+      "src": "/Icon.png",
       "sizes": "1024x1024",
       "type": "image/png"
     }
   ]
 }
+
 
