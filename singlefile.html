@@ -11,20 +11,22 @@ document.addEventListener("DOMContentLoaded", function () {
         el.remove();
     });
 
-    // Remove GN-Math Discord link (exact + partial match)
+    // Remove GN-Math Discord links (both invite codes)
     document.querySelectorAll(
-        'a[href="https://discord.gg/NAFw4ykZ7n"], a[href*="NAFw4ykZ7n"]'
+        'a[href*="NAFw4ykZ7n"], a[href*="D4c9VFYWyU"]'
     ).forEach(function(el) {
         el.remove();
     });
 
-    // Remove Discord logo that links to their Discord
-    document.querySelectorAll('a[href*="discord.gg/NAFw4ykZ7n"] img')
-        .forEach(function(img) {
-            img.remove();
-        });
+    // Remove Discord logos that link to their Discord
+    document.querySelectorAll(
+        'a[href*="discord.gg"] img'
+    ).forEach(function(img) {
+        img.remove();
+    });
 });
 </script>
+
 
 
 
