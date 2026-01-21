@@ -38,7 +38,8 @@
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#fb2651">
 </head>
-   <script>
+<script>
+/* JSON sources */
 const SOURCES = [
   "https://cdn.jsdelivr.net/gh/gn-math/gn-math-DONTDMCA@main/games.json",
   "https://moneyenr123.github.io/JC-Unblocked-GameHub/mygames.json"
@@ -75,7 +76,7 @@ async function findIcon(name, url) {
     return favicon;
   } catch {}
 
-  // 3. DuckDuckGo image search API (safe, public)
+  // 3. DuckDuckGo image search API
   const ddg = `https://api.duckduckgo.com/?q=${encodeURIComponent(cleanName + " game icon")}&format=json&pretty=1`;
   try {
     const res = await fetch(ddg);
@@ -84,104 +85,7 @@ async function findIcon(name, url) {
   } catch {}
 
   // 4. Fallback auto-generated icon
-  return `https://ui-avatars.com/api/?name=${encodeURIComponent(cleanName)}&background=111827&color=ffffff&size=128`;
-}
-
-/* SCRAPE GitLab GitHubGames */
-async function fetchGitLabGames() {
-  try {
-    const res = await fetch("https://githubgames.gitlab.io/game/", { mode: "cors" });
-    const html = await res.text();
-    const doc = new DOMParser().parseFromString(html, "text/html");
-
-    const links = [...doc.querySelectorAll("a")]
-      .filter(a => a.href.includes("githubgames.gitlab.io"))
-      .map(a => ({
-        name: a.textContent.trim(),
-        url: a.href
-      }));
-
-    // Add icons
-    for (const g of links) {
-      g.icon = await findIcon(g.name, g.url);
-    }
-
-    return links;
-  } catch {
-    return [];
-  }
-}
-
-/* SCRAPE PizzaEdition.win WITH ICON LOOKUP */
-async function fetchPizzaEditionGames() {
-  try {
-    const res = await fetch("https://pizzaedition.win/assets/mainstorage/", { mode: "cors" });
-    const html = await res.text();
-    const doc = new DOMParser().parseFromString(html, "text/html");
-
-    const games = [...doc.querySelectorAll("a")]
-      .map(a => a.getAttribute("href"))
-      .filter(h => h && h.endsWith(".html"))
-      .map(h => {
-        const name = h.replace(".html", "").replace(/[-_]/g, " ").trim();
-        const url = "https://pizzaedition.win/assets/mainstorage/" + h;
-        return { name, url };
-      });
-
-    // Add icons
-    for (const g of games) {
-      g.icon = await findIcon(g.name, g.url);
-    }
-
-    return games;
-  } catch {
-    return [];
-  }
-}
-
-/* Merge lists + remove duplicates */
-function mergeLists(lists) {
-  const map = new Map();
-  lists.flat().forEach(game => {
-    const key = game.name.toLowerCase().trim();
-    if (!map.has(key)) map.set(key, game);
-  });
-  return Array.from(map.values());
-}
-
-/* Display games using GN-Math UI */
-function displayMergedGames(games) {
-  if (typeof window.listZones !== "function") return;
-
-  window.zones = games.map((g, i) => ({
-    id: i,
-    name: g.name,
-    url: g.url,
-    icon: g.icon,
-    author: "JC Unblocked"
-  }));
-
-  listZones();
-}
-
-/* Main loader */
-async function updateGames() {
-  const lists = [];
-
-  for (const url of SOURCES) {
-    lists.push(await fetchList(url));
-  }
-
-  lists.push(await fetchGitLabGames());
-  lists.push(await fetchPizzaEditionGames());
-
-  const merged = mergeLists(lists);
-  displayMergedGames(merged);
-}
-
-updateGames();
-setInterval(updateGames, 60 * 60 * 1000);
-</script>
+  return `https://ui-avatars.com/api/?name=${encodeURIComponent(cleanName)}&background=111827&color=ffffff
 
 
 <body class="dark-mode">
@@ -282,6 +186,7 @@ setInterval(updateGames, 60 * 60 * 1000);
     </script>
 </body>
 </html>
+
 
 
 
